@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurphieLibrary JS - Demonstração Isolada e Otimizada</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .demo-box {
+            padding: 30px;
+            margin: 25px 0;
+            background: #ffffff;
+            color: #1a1a1a; /* Cor padrão interna fixada para as caixas */
+            border: 1px solid #e1e4e8;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+        .gradient-text {
+            color: #ffffff !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        #text-depth {
+            font-size: 28px;
+            color: #ffffff;
+            background: #2b2b2b;
+            padding: 15px 25px;
+            display: inline-block;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: white;
+            color: #1a1a1a;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        h1, p {
+            color: #1a1a1a;
+        }
+        /* Garante legibilidade dos textos fixos se o fundo geral mudar */
+        body[style*="background-color: rgb(18, 18, 18)"] h1,
+        body[style*="background-color: rgb(18, 18, 18)"] p {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SurphieLibrary JS Test Suite</h1>
+    <p>Tema Otimizado: Isolamento estrutural de palavras e caixas ativado com sucesso.</p>
+    
+    <button id="btn-dark-theme">Alternar Tema Escuro</button>
+    <button id="btn-light-theme">Alternar Tema Claro</button>
+
+    <hr style="border: 0; border-top: 1px solid #ddd; margin: 30px 0;">
+
+    <!-- Teste 1: Round -->
+    <div id="box-round" class="demo-box">Este bloco será arredondado.</div>
+
+    <!-- Teste 2: Font Cursive & Custom -->
+    <div id="text-cursive" class="demo-box">Este texto se tornará cursivo via nuvem.</div>
+    <div id="text-custom" class="demo-box">Este texto carregará uma fonte personalizada.</div>
+
+    <!-- Teste 3: Gradient Mix & Random -->
+    <div id="box-gradient-mix" class="demo-box gradient-text">Gradiente Misturado (Mix de Alta Intensidade)</div>
+    <div id="box-gradient-random" class="demo-box gradient-text">Gradiente Aleatório Dinâmico (Random Absoluto)</div>
+
+    <!-- Teste 4: Twocolors -->
+    <div id="box-twocolors" class="demo-box">Frente Vermelha e Verso Azul</div>
+
+    <!-- Teste 5: Glass -->
+    <div style="background: url('https://picsum.photos/800/300') center; padding: 30px; margin-top: 20px; border-radius: 8px;">
+        <div id="box-glass" class="demo-box" style="color: white !important;">Efeito de Vidro (Glassmorphism) com desfoque</div>
+    </div>
+
+    <!-- Teste 6: Glow -->
+    <div id="box-glow" class="demo-box">Efeito de Brilho Gradiente Cinza</div>
+
+    <!-- Teste 7: Center e Depth -->
+    <div id="box-parent-center" class="demo-box" style="border: 2px dashed #b3b3b3; background: #fafafa;">
+        <div id="text-depth">TEXTO EM 3D REAL</div>
+    </div>
+</div>
+
+<script src="surphielibrary.js"></script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        // 1. Round
+        surphie.Round("box-round", "25px");
+
+        // 2. Fontes
+        surphie.Font.cursive("text-cursive");
+        surphie.Font.load("text-custom", "Pacifico");
+
+        // 3. Gradientes
+        surphie.Gradient("box-gradient-mix").mix("#7f00ff", "#00e1d9");
+        surphie.Gradient("box-gradient-random").random();
+
+        // 4. Twocolors
+        surphie.Twocolors("box-twocolors").front("#ff3333").back("#1a1aff");
+
+        // 5. Glass
+        surphie.Glass("box-glass", "15px");
+
+        // 6 & 7. Temas Isolados com Aceleração por Hardware
+        surphie.Theme.auto();
+        surphie.ThemeWhite.auto();
+        surphie.Theme.toggle("btn-dark-theme");
+        surphie.ThemeWhite.toggle("btn-light-theme");
+
+        // 8. Glow
+        surphie.Glow("box-glow", "#888888", "25px");
+
+        // 9. Center
+        surphie.Center("box-parent-center");
+
+        // 10. Depth
+        surphie.Depth("text-depth");
+    });
+</script>
+
+</body>
+</html>

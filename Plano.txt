@@ -1,0 +1,17 @@
+Criamento do SurphieLibary JS
+primeiro, o surphie libary, será uma biblioteca de estilização javascript,  permitindo que o usuario consiga estilizar coisas via javascript.
+
+o surphielibary V1 terá dez comandos iniciais(talvez seja em inglês, preciso recuar o google tradutor):
+surphie.Round("Nome do ID de algo") > esse comando faz com que você arredonde algo via javascript.
+surphie.Font.cursive("Id de algum texto") ou surphi.Font."hello" > recua a um lugar em nuvem em qual vai estilizar aquele texto com aquela fonte via javascript.
+surphie.Gradient.(cores).(cores a).mix(misturar as cores) ou .random(misturar as cores de forma intensa.) > adiciona gradiante de dois jeitos, simples ou instensa.
+surphie.Twocolors."id de algum item" >  Adicionar duas cores aleatorias, é só definir .vermelho(ffuhd alguma coisa).azul(h2edi alguma coisa), ele aplicara a cor em forma de ordem, por exemplo, primeiro ele aplica a cor na frente(vermelho) e atras ele aplica o azul(o azul aparece tambem.)
+surphie.Glass("id", blur_intenso) > Você passa o id do desfoque, e a libary injeta  todo o efeito.
+surphie.Theme.auto() ou surphie.Theme.toggle("id_do_botao") > com esse, a libary vai vai ver perferencia do OS e após isso aplica a cor escura, tanto no fundo e tanto no botão.
+surphie.ThemeWhite.auto() ou surphie.ThemeWhite.toggle("id_do_botao") > A mesma coisa com o dark só que branco.
+surphie.Glow("id", "cor", intensidade) > Aplica efeito de "Gradiante" cinza nas coisas
+surphie.Center("id_pai") > centralizar as coisas no meio da tela atravez do ID pai.
+surphie.Depth("ID") >  Adicionar profundidade em algo(recomendado textos.)
+
+Para o caro usuario:
+"Você poderá usar e alterar a libary do jeito que quiser."
